@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nesmaperfumes.com/sitemap.xml
