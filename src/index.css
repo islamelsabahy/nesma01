@@ -1,0 +1,98 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 30% 15%;
+    --primary: 40 42% 59%;
+    --primary-foreground: 30 30% 15%;
+    --secondary: 30 35% 85%;
+    --secondary-foreground: 30 30% 15%;
+    --muted: 30 35% 93%;
+    --muted-foreground: 30 20% 40%;
+    --accent: 30 35% 85%;
+    --accent-foreground: 30 30% 15%;
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 42% 59%;
+    --input: 30 35% 85%;
+    --ring: 40 42% 59%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #F8F3EC;
+    color: #4B2E24;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  html[dir="rtl"] body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+  }
+
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4,
+  html[dir="rtl"] h5,
+  html[dir="rtl"] h6 {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F8F3EC;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8A96A;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B89850;
+  }
+}
+
+@layer components {
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #C8A96A 0%, #D4B87A 50%, #C8A96A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-[120px];
+  }
+
+  .container-main {
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20;
+  }
+}
